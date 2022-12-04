@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_management_app/src/modules/project/presenter/pages/components/section_page_app.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
@@ -92,6 +93,15 @@ class HomePage extends StatelessWidget {
                     const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
               ),
             ),
+            const SizedBox(height: 15),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 18.0),
+              child: SectionPageApp(
+                  title: "Tarefas de Hoje",
+                  description: "Quarta-feria, 11 Maio",
+                  titleButton: "Nova tarefa",
+                  onButtonClick: () {}),
+            )
           ],
         ),
       ),
