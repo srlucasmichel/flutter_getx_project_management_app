@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_management_app/src/modules/project/presenter/pages/components/card_project_app.dart';
 import 'package:project_management_app/src/modules/project/presenter/pages/components/section_page_app.dart';
 
 class HomePage extends StatelessWidget {
@@ -101,6 +102,23 @@ class HomePage extends StatelessWidget {
                   description: "Quarta-feria, 11 Maio",
                   titleButton: "Nova tarefa",
                   onButtonClick: () {}),
+            ),
+            const SizedBox(height: 6),
+            Container(
+              padding: const EdgeInsets.only(left: 13),
+              height: 150,
+              child: ListView.builder(
+                  itemCount: 2,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    return SizedBox(
+                      width: (MediaQuery.of(context).size.width / 100) * 75,
+                      child: const CardProjectApp(
+                          title: "Duxica Dribbble Team",
+                          progress: 55,
+                          members: ["", "", ""]),
+                    );
+                  }),
             )
           ],
         ),
